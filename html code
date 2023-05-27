@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#about">About Me</a></li>
+      </ul>
+    </nav>
+    <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+  </header>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill-cards">
+      <div class="skill-card">
+        <h3>HTML5</h3>
+        <div class="skill-content" style="z-index: 2;">
+          <p style="color: black;">Completed the course of HTML5 with multiple projects. Complete knowledge of HTML and HTML5.</p>
+          <a href="#">Read More</a>
+        </div>                        <!--   here , The text is not visible  -->
+      </div>
+      <div class="skill-card">
+        <h3>CSS3</h3>
+        <div class="skill-content">
+          <p>Description of the skill goes here.</p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>JavaScript</h3>
+        <div class="skill-content">
+          <p>Description of the skill goes here.</p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+      <!-- Add more skill cards here -->
+    </div>
+  </section>
+  
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-cards">
+      <div class="project-card">
+        <h3>Project 1</h3>
+        <p>Description of the project goes here.</p>
+      </div>
+      <div class="project-card">
+        <h3>Project 2</h3>
+        <p>Description of the project goes here.</p>
+      </div>
+      <!-- Add more project cards here -->
+    </div>
+  </section>
+  
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="experience-cards">
+      <div class="experience-card">
+        <h3>Company 1</h3>
+        <p>Position: Your role</p>
+        <p>Date: Start Date - End Date</p>
+      </div>
+      <div class="experience-card">
+        <h3>Company 2</h3>
+        <p>Position: Your role</p>
+        <p>Date: Start Date - End Date</p>
+      </div>
+      <!-- Add more experience cards here -->
+    </div>
+  </section>
+  
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Write a brief description about yourself.</p>
+  </section>
+
+  <footer>
+    <p>&copy; Your Name | Your Portfolio</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
