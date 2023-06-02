@@ -1,6 +1,8 @@
 // Toggle responsive navigation menu
 const menuToggle = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('nav ul');
+var loader = document.getElementById('loading-screen');
+
 
 menuToggle.addEventListener('click', () => {
   navigation.classList.toggle('show');
@@ -19,8 +21,10 @@ icons.forEach((icon) => {
 });
 
 
-window.addEventListener('load', function() {
-  var loader = document.getElementById('loading-screen');
-  loader.classList.add('loaded');
+window.addEventListener('unload', function() {
+  loader.classList.toggle('loaded');
 });
 
+window.addEventListener('load',()=>{
+  loader.classList.toggle('loaded');
+});
