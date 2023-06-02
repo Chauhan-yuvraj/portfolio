@@ -1,215 +1,189 @@
 body {
-    /* background-color: #000;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    margin: 0; */
-        background: linear-gradient(135deg, #000080, #000, #000, #000080);
-        color: #fff;
-        font-family: Arial, sans-serif;
-        margin: 0;
-      
-  }
-  
-  header {
-    background: linear-gradient(to bottom, #000, #000080);
-    padding: 20px;
-  }
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-  }
-  
-  nav ul li {
-    margin: 0 10px;
-  }
- 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    background-color: #000;
-    position: relative;
-    overflow: hidden;
-  }
-  nav ul li a:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s ease;
-    z-index: -1;
-  }
-  nav ul li a:hover:before {
-    transform: translateX(100%);
-  }  
-  nav ul li a:hover {
-    background-color: #000080;
-  }
-  
-  nav ul li a:active {
-    background-color: #fff;
-    color: #000080;
-  }
-  section {
-    padding: 40px;
-  }
-  
-  section h2 {
-    color: #00BFFF;
-  }
-  
-  footer {
-    background-color: #000080;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  @media screen and (max-width: 600px) {
-    /* Responsive styles for screens smaller than 600px */
-    nav ul li {
-      display: block;
-      margin: 10px 0;
-    }
-  }
-/* Add this at the end of styles.css */
+  background: linear-gradient(135deg, #000080, #000, #000, #000080);
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
 
-.menu-toggle {
-    display: none;
-    cursor: pointer;
-    padding: 10px;
-  }
-  
-  .menu-toggle span {
-    display: block;
-    width: 30px;
-    height: 5px;
-    background-color: #fff;
-    margin-bottom: 5px;
-  }
-  
-  @media screen and (max-width: 600px) {
-    nav ul {
-      display: none;
-    }
-  
-    .menu-toggle {
-      display: block;
-    }
-  
-    .show {
-      display: block;
-    }
-  }
-  #skills {
-    padding: 40px;
-    
-  }
-  
-  .skill-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .skill-card {
-    width: 250px;
-    height: 100px;
-    background-color: #fff;
-    border-radius: 5px;
-    margin: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .skill-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-
-  /* .skill-content {
-    padding: 15px;
-    height: 0;
-    opacity: 0;
-    transition: all 0.3s ease;
-  } */
-  
-.skill-card .skill-content { 
-    height: 0;
-    opacity: 0;
-    transition: height 0.3s ease, opacity 0.3s ease;
-    padding: 15px;
-    box-sizing: border-box;
-    color: #fff; /* Set the text color */
-    background-color: rgba(0, 0, 0, 0.8); /* Set the background color */
-    text-align: center; /* Align the text within the card */
-  /* ...existing styles... */
-  /* position: absolute;
+header {
+  position: sticky;
   top: 0;
-  left: 0;  
+  background-color: #000;
+  z-index: 100;
+}
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0;
-  color: #000;
-  background-color: rgba(214, 14, 14, 0.9);
-  transition: opacity 0.3s ease; */
-} 
-
-  
-  
-.skill-card h3 {
-  color: #000080;
-  font-size: 20px;
-  margin: 10px 0;
-  position: relative;
-  left: 80px;
+  background-color: #fff;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
- 
-  skill-card:hover .skill-content {
-    /* height: auto;
-    opacity: 1;
-    padding: 15px;
-    background-color: #f0f0f0; */
-    opacity: 1;
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
-  .skill-card:hover a {
-    display: inline-block;
-    margin-top: 10px;
+  100% {
+    transform: rotate(360deg);
   }
-  .skill-card a {
+}
+
+/* Add this style to hide the loading screen when the content is loaded */
+
+.loaded {
+  display: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav ul li a:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+nav ul li a:hover:before {
+  transform: translateX(100%);
+}
+
+nav ul li a:hover {
+  background-color: #000080;
+}
+
+nav ul li a:active {
+  background-color: #fff;
+  color: #000080;
+}
+
+.icons{
+  height: 100px;
+  width: 100px;
+}
+.skill-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-icons span {
+  font-size: 3rem; /* Adjust the size of the icons */
+  margin: 0 1rem; /* Add some spacing between icons */
+}
+
+@media (max-width: 768px) {
+  /* Responsive styles for screens up to 768px wide */
+  .skill-icons {
+    flex-wrap: wrap;
+  }
+
+  .skill-icons span {
+    margin: 0.5rem; /* Adjust spacing for smaller screens */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+section {
+  padding: 40px;
+}
+
+section h2 {
+  color: #00BFFF;
+}
+
+footer {
+  background-color: #000080;
+  padding: 20px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  /* Responsive styles for screens smaller than 600px */
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 30px;
+  height: 5px;
+  background-color: #fff;
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  nav ul {
     display: none;
-    color: #000;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
   }
-  
-  .skill-card a:hover {
-    color: #000080;
-  }  
-  
-  .skill-card p {
-    color: #000;
+
+  .menu-toggle {
+    display: block;
   }
-  
-  .skill-card:active {
-    transform: scale(1);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  .show {
+    display: block;
   }
-  #projects,
+}
+
+#projects,
 #experience {
   padding: 40px;
 }
@@ -256,4 +230,52 @@ nav ul li a {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-  
+
+
+
+.skill-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.skill-icons span {
+  font-size: 3rem; /* Adjust the size of the icons */
+  margin: 0 1rem; /* Add some spacing between icons */
+  position: relative;
+  cursor: pointer;
+}
+
+
+
+.skill-icons span::before {
+  content: attr(data-name);
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  white-space: nowrap;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+
+.skill-icons span:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.skill-icons span i {
+  transition: color 0.3s ease;
+}
+
+.skill-icons span:hover i {
+  color: #ff9900; /* Change the color on hover */
+}
