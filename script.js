@@ -6,8 +6,6 @@ menuToggle.addEventListener('click', () => {
   navigation.classList.toggle('show');
 });
 
-
-
 const icons = document.querySelectorAll('.skill-icons span');
 
 icons.forEach((icon) => {
