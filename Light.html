@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Light.css">
+</head>
+<body>
+    <header>
+        <nav>
+          <ul>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#about">About Me</a></li>
+          </ul>
+        </nav>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+<div class="main">
+    <div class="main-heading">
+        <h1>Can you turn on the light On</h1>
+    </div>
+
+    <div class="buttons-container">
+        <button onclick="document.getElementById('myImage').src='LightOn.png'" class="btn">ON</button>
+        <button onclick="document.getElementById('myImage').src='LightOff.png'" class="btn">OFF</button>
+    </div>
+
+    <div class="image-container">
+        <img src="LightOff.png" alt="OnLight" id="myImage" class="img">
+    </div>
+
+    <div class="nav">
+        <button><a href="">Next Page</a></button>
+    </div>
+</div>
+</body>
+</html>
