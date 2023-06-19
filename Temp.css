@@ -1,0 +1,42 @@
+*{
+    padding: 0%;
+    margin: 0%;
+
+}
+body{
+    background-color: wheat;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0%;
+    padding: 20px;
+}
+#tempCalc{
+    border: 2px solid transparent;
+    border-radius: 10px;
+    box-shadow: 20px 20px 50px 25px;
+    text-align: center;
+    background-color: rgba(224, 6, 79, 0.392);
+    max-width: 80%;
+    width: 800px;
+    padding: 50px 20px;
+}
+.text{
+    margin: 0%;
+    color: black;
+    letter-spacing: 5px;
+    text-transform: capitalize;
+}
+.submit{
+    background-color: black;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+#result{
+    font-size: x-large;
+}
