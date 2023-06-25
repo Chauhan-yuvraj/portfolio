@@ -71,6 +71,7 @@ reset.addEventListener('click',()=>{
     document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = '0px'
     document.querySelector('.line').style.width = "0vw"
     happy.pause();
+    happy.currentTime = 0;
 
 
 
