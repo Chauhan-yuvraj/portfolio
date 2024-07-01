@@ -1,0 +1,21 @@
+<div class="main">
+  <div class="heading">
+    <div class="heading-box">
+      <div class="title">Featured Projects</div>
+      <div class="dec">
+        Here are some of the selected projects that showcase my passion for
+        front-end development.
+      </div>
+    </div>
+  </div>
+  <div class="project-list">
+    @for (CurrentProject of ProjectList; track CurrentProject.id) {
+    <app-project
+      [projects]="CurrentProject"
+      (Project)="OnselectedProject($event)"
+      (Demo)="onDemoClicked($event)"
+      (Github)="onGitClicked($event)"
+    />
+    }
+  </div>
+</div>
