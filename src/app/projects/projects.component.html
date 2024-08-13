@@ -9,7 +9,7 @@
     </div>
   </div>
   <div class="project-list">
-    @for (CurrentProject of ProjectList; track CurrentProject.id) {
+    @for (CurrentProject of repositories; track $index) {
     <app-project
       [projects]="CurrentProject"
       (Project)="OnselectedProject($event)"

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, inject, Input, OnInit, Output } from '@angular/core';
 interface TypeProject {
   id: string;
   avatar: string;
@@ -23,7 +23,7 @@ export class ProjectComponent {
   @Output() Github = new EventEmitter<string>();
 
   get imagePath() {
-    return 'assets/' + this.projects.avatar;
+    return this.projects.avatar;
   }
   OnselectedProject() {
     this.Project.emit(this.projects.id);
