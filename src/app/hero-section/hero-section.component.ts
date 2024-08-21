@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import {gsap} from 'gsap';
 @Component({
   selector: 'app-hero-section',
   standalone: true,
@@ -7,6 +7,14 @@ import { Component } from '@angular/core';
   templateUrl: './hero-section.component.html',
   styleUrl: './hero-section.component.scss'
 })
-export class HeroSectionComponent {
-
+export class HeroSectionComponent implements OnInit {
+  // t1 = gsap.timeline()
+  ngOnInit(): void {
+      // gsap.from(".gsap",{
+      //   scale : 0,
+      //   duration : 0.5,
+      //   delay : 0.3,
+      //   stagger : 0.5,
+      // })
+  }
 }

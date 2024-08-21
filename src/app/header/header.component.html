@@ -1,10 +1,21 @@
 <div class="main-header">
-    <div class="main-header-right">CHAUHAN Y<span>UV</span>RAJ</div>
-    <div class="main-header-left">
-        <ul>
-            <li>Work</li>
-            <li>About</li>
-            <li>Contact</li>
-        </ul>
-    </div>
+    <a [routerLink]="['']">
+  <div class="main-header-right">
+    <span class="Hname">CHAUHAN Y</span> <span class="uv">UV</span>
+    <span class="Hname">RAJ</span>
+  </div>
+</a>
+  <div class="main-header-left">
+    <ul>
+      <a [routerLink]="['/works']" >
+        <li>Work</li>
+      </a>
+      <a [routerLink]="['/about']" >
+        <li>About</li>
+      </a>
+      <a>
+        <li>Contact</li>
+      </a>
+    </ul>
+  </div>
 </div>

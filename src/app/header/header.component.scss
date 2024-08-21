@@ -7,13 +7,17 @@
   background-color: black;
 }
 .main-header-right {
-    padding: 10px;
-    font-size: 1.5rem;
-    font-family: "Bebas Neue", sans-serif;
+  padding: 10px;
+  font-size: 1.5rem;
+  font-family: "Bebas Neue", sans-serif;
 
-    span{
-      color: red;
-    }
+  .uv {
+    color: red;
+  }
+}
+a{
+  text-decoration: none;
+  color: white;
 }
 .main-header-left {
   ul {
@@ -22,10 +26,10 @@
     justify-content: space-around;
     gap: 20px;
     font-family: "Inter", sans-serif;
-
     li {
-        font-size: 1.2rem;
+      font-size: 1.2rem;
       list-style: none;
+      cursor: pointer ;
     }
   }
 }

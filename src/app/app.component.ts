@@ -5,6 +5,7 @@ import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { AboutComponent } from './about/about.component';
 import { ProjectsService } from './projects/projects.service';
+import { ContentComponent } from "./content/content.component";
 
 @Component({
   selector: 'app-root',
@@ -15,17 +16,16 @@ import { ProjectsService } from './projects/projects.service';
     HeroSectionComponent,
     ProjectsComponent,
     AboutComponent,
-  ],
+    ContentComponent,
+    RouterOutlet
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'first-test-app';
+  title = 'PortFolio';
   private projectService = inject(ProjectsService);
-  content:string = '';
   ngOnInit(): void {
     
-    // this.projectService.SendingRequest();
-    console.log('Hello');
   }
 }
