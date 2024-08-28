@@ -16,7 +16,7 @@
   export class ProjectsService {
     private httpClient = inject(HttpClient);
     private myToken =
-      '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';
+      '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';
 
     private header = new HttpHeaders({
       Authorization: `Bearer ${this.myToken}`,
