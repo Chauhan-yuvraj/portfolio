@@ -15,12 +15,12 @@
   })
   export class ProjectsService {
     private httpClient = inject(HttpClient);
-    private myToken =
-      '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';
+    // private myToken =
+    //   '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';
 
-    private header = new HttpHeaders({
-      Authorization: `Bearer ${this.myToken}`,
-    });
+    // private header = new HttpHeaders({
+    //   Authorization: `Bearer ${this.myToken}`,
+    // });
 
     DecodeBase64(encodingString: string): string {
       return atob(encodingString);
@@ -28,9 +28,9 @@
 
     getRepositories() {
       return this.httpClient
-        .get<Repository[]>('https://api.github.com/users/Chauhan-yuvraj/repos', {
-          headers: this.header,
-        })
+        .get<Repository[]>('https://api.github.com/users/Chauhan-yuvraj/repos'
+          // headers: this.header,
+)
         .pipe(
           map((repos) =>
             repos.filter(
@@ -40,8 +40,8 @@
           switchMap((filteredRepos) => {
             const requests = filteredRepos.map((repo) =>
               this.httpClient.get<any>(
-                `https://api.github.com/repos/Chauhan-yuvraj/${repo.name}/contents/repository.js`,
-                { headers: this.header }
+                `https://api.github.com/repos/Chauhan-yuvraj/${repo.name}/contents/repository.js`
+                // { headers: this.header }
               )
             );
             return forkJoin(requests);

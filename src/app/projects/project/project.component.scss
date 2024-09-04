@@ -1,116 +1,147 @@
 .main {
-    width: 100%;
-    display: flex;
-    height: 100%;
-    // min-height: 30rem;
-    // align-items: center;
-    justify-content: center;
-    margin-bottom: 40px;
-    // border: 2px solid black;
-    gap: 10rem;
-    .pic {
-      .img {
-        background-color: #1a1a1a;
-        padding: 7rem 3rem;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 40px;
-        // border: 2px solid black;
-        img {
-          width: 15rem;
-        }
+  width: 100%;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  margin-bottom: 40px;
+  gap: 10rem;
+  .pic {
+    .img {
+      background-color: #1a1a1a;
+      padding: 7rem 3rem;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 40px;
+      // border: 2px solid black;
+      img {
+        width: 15rem;
       }
     }
-    .project-content {
+  }
+  .project-content {
+    display: grid;
+    // gap: 2rem;
+    width: 40%;
+    height: max-content;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    // border: 2px solid black;
+
+    .project-heading {
+      font-family: "Manrope", sans-serif;
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+    .project-dec {
+      font-family: "Manrope", sans-serif;
+      text-align: justify;
+    }
+    .project-info {
       display: grid;
-      // gap: 2rem;
-      width: 40%;
-      height: max-content;
+      grid-template-rows: repeat(3, 1fr);
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
-      // border: 2px solid black;
-  
-      .project-heading {
-        font-family: "Manrope", sans-serif;
-        font-size: 2.5rem;
-        font-weight: 800;
-        margin-bottom: 1rem;
-      }
-      .project-dec {
-        font-family: "Manrope", sans-serif;
-        text-align: justify;
-      }
-      .project-info {
-        display: grid;
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-columns: 1fr;
       //   border: 2px solid black;
-        font-family: "Manrope", sans-serif;
-  
-        .p1 {
-          border-bottom: 2px solid #484848;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          margin-inline: 30px;
-          div {
-            text-transform: uppercase;
-            
-  
-            font-family: "Manrope", sans-serif;
-            font-weight: 900;
-          }
-        }
-        .p2,
-        .p3 {
-          border-bottom: 2px solid #484848;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          margin-inline: 30px;
-        }
-      }
-      .project-btn{
+      font-family: "Manrope", sans-serif;
+
+      .p1 {
+        border-bottom: 2px solid #484848;
         display: flex;
         align-items: center;
-        justify-content: center;
-        width: 100%;
-      .btn{
+        justify-content: space-between;
+        margin-inline: 30px;
+        div {
+          text-transform: uppercase;
+
+          font-family: "Manrope", sans-serif;
+          font-weight: 900;
+        }
+      }
+      .p2,
+      .p3 {
+        border-bottom: 2px solid #484848;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-inline: 30px;
+      }
+    }
+    .project-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      .btn {
         display: flex;
         height: fit-content;
         justify-content: space-around;
         width: 100%;
-        .b1{
-            display: flex;
-            gap: 5px;
-            border-bottom: 2px solid #484848;
-            width: fit-content;
-            span{
+        cursor: url("/assets/cursor.png"), auto;
+
+        .b1 {
+          display: flex;
+          gap: 5px;
+          border-bottom: 2px solid #484848;
+          width: fit-content;
+          cursor: pointer;
+          span {
             font-family: "Manrope", sans-serif;
-            font-weight: bold;    
-            }
-            .svg{
-                width: 15px;
-                transform: rotateZ(315deg);
-            }
+            font-weight: bold;
+            cursor: pointer;
+          }
+          .svg {
+            width: 15px;
+            transform: rotateZ(315deg);
+            cursor: pointer;
+          }
         }
-        .b2{
-            display: flex;
-            gap: 5px;
-            border-bottom: 2px solid #484848;
-            width: fit-content;
-            span{
+        .b2 {
+          display: flex;
+          gap: 5px;
+          border-bottom: 2px solid #484848;
+          width: fit-content;
+          cursor: pointer;
+          span {
             font-family: "Manrope", sans-serif;
-            font-weight: bold;    
-            }
-            .svg{
-                width:  15px;
-            }
+            font-weight: bold;
+            cursor: pointer;
+          }
+          .svg {
+            width: 15px;
+            cursor: pointer;
+          }
         }
       }
     }
+  }
+}
+
+@media(max-width:1025px){
+  .main{
+    height: 100%;
+    gap: 5rem;
+    .pic{
+      .img{
+        padding: 2rem;
+        height: 35rem;
+      }
+    }
+    .project-content{
+      width: auto;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      // height: 100%;
+      gap: 15rem;
+      justify-content: space-around;
+      gap: 0;
+      
+      .project-heading{}
+      .project-dec{
+        height: fit-content;
+      }
     }
   }
-  
+}

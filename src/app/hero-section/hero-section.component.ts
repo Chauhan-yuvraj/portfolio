@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import {gsap} from 'gsap';
 @Component({
   selector: 'app-hero-section',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './hero-section.component.html',
   styleUrl: './hero-section.component.scss'
 })
