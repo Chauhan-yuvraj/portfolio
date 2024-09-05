@@ -54,11 +54,7 @@ export class ContactComponent implements OnInit {
         Validators.required,
         Validators.minLength(10),
       ]),
-      source: new FormArray([
-        new FormControl(false),
-        new FormControl(false),
-        new FormControl(false),
-      ]),
+      subject:['',Validators.required]
     });
 
     console.log(this.form);

@@ -116,8 +116,7 @@
           <label for="email">Email</label>
           <input type="email" id="email" name="email" formControlName="email" />
           @if(form.get('email')?.touched &&
-          form.get('email')?.hasError('required') &&
-          form.get('email')?.hasError("email")) {
+          form.get('email')?.hasError('required')) {
           <p class="invalid">Please enter a valid Email</p>
           }
         </div>
@@ -141,13 +140,14 @@
       <div class="contact-right-div">
         <div class="subject-div">
           <div class="select-subject">Select Subject?</div>
-          <div class="radioButtons" formArrayName="source">
+          <div class="radioButtons">
             <div class="radiobtns">
               <input
                 type="radio"
-                name="subject"
                 id="general"
-                formControlName="0"
+                name="subject"
+                value="Male"
+                formControlName="subject"
               />
               <label for="general">General Inquiry</label>
             </div>
@@ -157,7 +157,6 @@
                 type="radio"
                 name="subject"
                 id="idea"
-                formControlName="1"
               />
               <label for="idea">Have any Idea</label>
             </div>
@@ -167,7 +166,6 @@
                 type="radio"
                 name="subject"
                 id="recruitment"
-                formControlName="2"
               />
               <label for="recruitment">Recruitment</label>
             </div>
@@ -181,7 +179,6 @@
             type="text"
             id="message"
             name="message"
-            formControlName="message"
           />
           @if (form.get('message')?.touched &&
           form.get('message')?.hasError("required")){
@@ -199,7 +196,7 @@
           } -->
         </div>
       </div>
-      <div class="contact-right-div">
+      <div class="contact-right-div btn-container">
         <div class="input-btn">
           <input type="reset" value="Reset" class="" (onclick)="onReset()" />
         </div>

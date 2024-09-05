@@ -37,3 +37,37 @@
         margin-top: 10rem;
     }
 }
+
+@media(max-width:1280px){
+    .main{
+        .heading{
+            text-align: center  ;
+
+            .heading-box{
+                width: 100%;
+            }
+        }
+        .project-list{
+            width: auto;
+            height: auto;
+            
+        }
+    }
+}
+@media(max-width:425px){
+    .main{
+        margin: 2rem;
+        .heading{
+            text-align: center  ;
+
+            .heading-box{
+                width: 100%;
+            }
+        }
+        .project-list{
+            width: auto;
+            height: auto;
+            
+        }
+    }
+}
